@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_accueil" android:icon="@android:drawable/ic_menu_myplaces" android:title="Accueil"/>
+        <item android:id="@+id/nav_sites" android:icon="@android:drawable/ic_menu_mapmode" android:title="Sites touristiques"/>
+        <item android:id="@+id/nav_itineraires" android:icon="@android:drawable/ic_menu_directions" android:title="Itinéraires"/>
+        <item android:id="@+id/nav_favoris" android:icon="@android:drawable/star_big_on" android:title="Favoris"/>
+        <item android:id="@+id/nav_apropos" android:icon="@android:drawable/ic_menu_info_details" android:title="À propos"/>
+    </group>
+    <item android:title="Plus">
+        <menu>
+            <item android:id="@+id/nav_parametres" android:icon="@android:drawable/ic_menu_preferences" android:title="Paramètres"/>
+            <item android:id="@+id/nav_deconnexion" android:icon="@android:drawable/ic_lock_power_off" android:title="Se déconnecter"/>
+        </menu>
+    </item>
+</menu>

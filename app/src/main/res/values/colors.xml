@@ -2,4 +2,13 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="rouge">#D32F2F</color>
+    <color name="rouge_fonce">#B71C1C</color>
+    <color name="rose_clair">#FDECEC</color>
+    <color name="gris_texte">#555555</color>
+    <color name="gris_fond">#F5F5F5</color>
+    <color name="blanc">#FFFFFF</color>
+    <color name="etoile">#FFB300</color>
+
 </resources>

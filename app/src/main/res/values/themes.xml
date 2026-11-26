@@ -6,4 +6,8 @@
     </style>
 
     <style name="Theme.DiscoverTunisia" parent="Base.Theme.DiscoverTunisia" />
+    <style name="ImageArrondie">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
 </resources>
