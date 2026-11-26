@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">Discover Tunisia.</string>
+    <string name="app_name">DiscoverTunisia</string>
+
+    <string name="menu_ouvrir">Ouvrir le menu</string>
+    <string name="menu_fermer">Fermer le menu</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
