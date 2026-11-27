@@ -1,4 +1,5 @@
 package com.example.discovertunisia;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -11,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.chip.ChipGroup;
+
 public class SitesFragment extends Fragment {
 
     private LinearLayout liste;
@@ -18,6 +20,7 @@ public class SitesFragment extends Fragment {
     public SitesFragment() {
         super(R.layout.fragment_sites);
     }
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -35,6 +38,7 @@ public class SitesFragment extends Fragment {
 
         afficher(null);
     }
+
     private void afficher(String categorie) {
         liste.removeAllViews();
 
@@ -47,13 +51,13 @@ public class SitesFragment extends Fragment {
             ((TextView) carte.findViewById(R.id.noteSite)).setText(s.note);
             ((TextView) carte.findViewById(R.id.descSite)).setText(s.description);
 
-
+            // Clic : ouvrir l'écran détail
             carte.setOnClickListener(v -> {
                 int index = SiteRepository.SITES.indexOf(s);
                 getParentFragmentManager()
                         .beginTransaction()
                         .replace(R.id.fragment_container, SiteDetailFragment.nouveau(index))
-                        .addToBackStack(null)
+                        .addToBackStack(null)   // le bouton retour revient à la liste
                         .commit();
             });
 
