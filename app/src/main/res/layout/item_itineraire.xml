@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Une carte d'itinéraire : réutilisée pour chaque itinéraire -->
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp">
+
+    <!-- Ligne horizontale : image | textes | flèche -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <!-- 1. L'image (remplie depuis le code Java) -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageItineraire"
+            android:layout_width="100dp"
+            android:layout_height="75dp"
+            android:contentDescription="Itinéraire"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/ImageArrondie" />
+
+        <!-- 2. Le titre et le détail (remplis depuis le code Java) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titreItineraire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/detailItineraire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/gris_texte"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- 3. La flèche à droite -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="›"
+            android:textSize="28sp" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
