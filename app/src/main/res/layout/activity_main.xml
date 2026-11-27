@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
 
+    <!-- 1. Le contenu : barre d'outils + fragments + barre du bas -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -19,11 +20,15 @@
             android:background="@color/rouge"
             android:theme="@style/ThemeOverlay.Material3.Dark.ActionBar"
             app:titleTextColor="@color/blanc" />
+
+        <!-- Zone où s'affichent les fragments -->
         <FrameLayout
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1" />
+
+        <!-- Barre de navigation du bas -->
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigation"
             android:layout_width="match_parent"
@@ -34,6 +39,8 @@
             app:labelVisibilityMode="labeled"
             app:menu="@menu/menu_navigation" />
     </LinearLayout>
+
+    <!-- 2. Le menu latéral -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigationView"
         android:layout_width="wrap_content"
